@@ -1,0 +1,12 @@
+{
+  "printer_host": "192.168.1.50",
+  "serial": "01P00A000000000",
+  "access_code": "12345678",
+  "allowed_clients": ["192.168.1.30"],
+  "listen_port": 9152,
+  "language": "en",
+  "camera": true,
+  "notify": {
+    "url": "https://ntfy.sh/replace-with-your-own-topic"
+  }
+}

@@ -1,0 +1,21 @@
+[package]
+name = "bambu-printer"
+version = "1.0.0"
+edition = "2024"
+license = "GPL-3.0-or-later"
+publish = false
+
+# The manifest icon and the alert sounds ship from the crate tree.
+[package.metadata.nix]
+include = ["assets/**"]
+
+[lib]
+name = "bambu_printer"
+crate-type = ["cdylib"]
+
+[dependencies]
+bmc-wasm-sdk = { path = "../bmc-sdk/bmc-wasm-runtime/sdk" }
+deckfx = { path = "../deckfx" }
+
+[lints]
+workspace = true

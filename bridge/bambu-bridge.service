@@ -1,0 +1,11 @@
+[Unit]
+Description=bambu-bridge: read-only Bambu Lab printer status for the Braiins Deck
+After=network-online.target
+
+[Service]
+ExecStart=%h/.local/share/bambu-bridge/venv/bin/python %h/.local/share/bambu-bridge/bambu_bridge.py
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=default.target
